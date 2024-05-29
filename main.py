@@ -14,5 +14,6 @@ driver.get('https://www.python.org')
 
 search_bar = driver.find_element(By.NAME, value='q')
 print(search_bar.get_attribute('placeholder'))
+
 #driver.close()
 driver.quit()
