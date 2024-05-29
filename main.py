@@ -14,6 +14,11 @@ driver.get('https://www.python.org')
 
 search_bar = driver.find_element(By.NAME, value='q')
 print(search_bar.get_attribute('placeholder'))
-
+button = driver.find_element(By.ID, value='submit')
+print(button.size)
+doc_link = driver.find_element(By.CSS_SELECTOR, value='.documentation-widget a')
+print(doc_link)
+submit_bug = driver.find_element(By.XPATH, value='//*[@id="site-map"]/div[2]/div/ul/li[3]/a')
+print(submit_bug.text)
 #driver.close()
-driver.quit()
+#driver.quit()
