@@ -6,7 +6,8 @@ chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option('detach', True)
 driver = webdriver.Chrome(options=chrome_options)
 
-driver.get("https://www.wikipedia.org/wiki/Main_Page")
+# driver.get("https://www.wikipedia.org/wiki/Main_Page")
+driver.get('http://secure-retreat-92358.herokuapp.com')
 driver.implicitly_wait(5)
 # driver.refresh()
 
@@ -18,10 +19,14 @@ driver.implicitly_wait(5)
 # all_portals.click()
 
 #Finding search input my name
-search = driver.find_element(By.NAME, value='search')
-print(search.get_attribute('name'))
+fnsearch = driver.find_element(By.NAME, value='fName')
+
+lnsearch = driver.find_element(By.NAME, value='lName')
+
+emailsearch = driver.find_element(By.NAME, value='email')
+
 
 #input text in search field
-search.send_keys('Python', Keys.ENTER)
-
-
+fnsearch.send_keys('FirstName', Keys.TAB)
+lnsearch.send_keys('LastName', Keys.TAB)
+emailsearch.send_keys('emailaddress@origin.com', Keys.ENTER)
