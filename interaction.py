@@ -25,8 +25,12 @@ lnsearch = driver.find_element(By.NAME, value='lName')
 
 emailsearch = driver.find_element(By.NAME, value='email')
 
+submit = driver.find_element(By.TAG_NAME, value='button')
+print(submit.get_attribute('type'))
+
 
 #input text in search field
-fnsearch.send_keys('FirstName', Keys.TAB)
-lnsearch.send_keys('LastName', Keys.TAB)
-emailsearch.send_keys('emailaddress@origin.com', Keys.ENTER)
+fnsearch.send_keys('FirstName')
+lnsearch.send_keys('LastName')
+emailsearch.send_keys('emailaddress@origin.com')
+submit.click()
